@@ -14,6 +14,8 @@ public static void main(String[] args) {
 Product product = new Product("Edam", 3.3, 120);
 System.out.println("Product value is " + product.countValue());
 product.printProduct();
+product.changeAmount(245);
+System.out.println("\nProduct value is " + product.countValue());
 }
 }
 class Product {
@@ -27,6 +29,11 @@ this.amount = amount;
 }
 public double countValue() {
 return(amount * price);
+}
+
+public void changeAmount(int newvalue)
+{
+    amount = newvalue;
 }
 public void printProduct() {
 System.out.printf("Product %s, price %4.1f and balance %d pcs",
